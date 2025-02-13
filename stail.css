@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    gap: 10px;
+}
+
+#buttonId {
+    
+    width: 300px;
+    height: 100px;
+    background-color: cornflowerblue;
+    border-radius: 12px;
+    font-size: 30px;
+    color: white;
+}
+
+#buttonId:hover {
+    background-color: rgb(45, 113, 240);
+}
+
+#testList {
+    font-size: 30px;
+    border: 3px solid #000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#testList li:hover {
+    color: silver;
+}
