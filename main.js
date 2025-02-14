@@ -46,8 +46,9 @@ handleButtonClick('myButton', 'Button clicked!');
 function trackMousePosition() {
   const button = document.getElementById("buttonId");
   if (button) {
-    button.addEventListener("mousemove", (event) => {
-      console.log(`Mous x: ${event.clientX}, Mous y:${event.clientY} `);
+    document.addEventListener("mousemove", (event) => {
+    console.log(`Mous x: ${event.clientX}, Mous y:${event.clientY} `);
+      
     });
   } 
 }
@@ -74,7 +75,10 @@ function setupEventDelegation(selector) {
   const liItem = document.querySelector(selector);
   if (liItem) {
     liItem.addEventListener('click', (event) => {
-      console.log(`Item clicked ${event.target.textContent}`);
+      if (event.target.tagName.toLowerCase() === 'li') {
+        console.log(`Item clicked ${event.target.textContent}`);
+      };
+      
     });
   };
 }
